@@ -12,35 +12,33 @@ export default function LogPage() {
 
   const data = useContext(LogsData);
 
-  // console.log(data.find((item) => item.id === router.query.id));
-
   const [log, setLog] = useState<Log>();
   const [isNotFound, setNotFound] = useState<boolean>(false);
 
   useEffect(() => {
     const logData = data.find((item) => item.id === router.query.id);
 
-    console.log(logData);
-
     if (logData) {
-      console.log("set data");
       setLog(logData);
+      setNotFound(false);
     } else {
       setNotFound(true);
     }
   });
 
-  if (!isNotFound || !log) {
+  if (isNotFound || !log) {
     return <Error statusCode={404} />;
   }
 
   return (
-    <>
-      <Box textStyle="title">{log.Title ? log.Title : getLogTitle(log.id)}</Box>
-      <Box textStyle="text">
+    <Box w="100%" mt="5">
+      <Box textStyle="title" mb="2">
+        {log.Title ? log.Title : getLogTitle(log.id)}
+      </Box>
+      <Box textStyle="text" mb="2">
         {new Date(log.created_at).toLocaleDateString()}
       </Box>
       <Box textStyle="text">{log.Content}</Box>
-    </>
+    </Box>
   );
 }
