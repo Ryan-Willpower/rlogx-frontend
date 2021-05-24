@@ -1,6 +1,7 @@
 import { useContext } from "react";
 
 import { Card } from "../components/card";
+import { SEO } from "../components/seo";
 import { getLogTitle } from "../utils/get-log-title";
 import { LogsData } from "../utils/logs-context";
 
@@ -9,6 +10,7 @@ const Home: React.FC = () => {
 
   return (
     <>
+      <SEO />
       {logs.length > 0 ? (
         logs.map((item) => (
           <Card
