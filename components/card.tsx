@@ -17,6 +17,10 @@ export const Card: React.FC<CardProps> = ({ title, datetime, content, id }) => {
         borderRadius="default"
         p="5"
         my="15"
+        _hover={{
+          boxShadow: "dark-lg",
+          cursor: "pointer",
+        }}
       >
         <Box textStyle="title">{title}</Box>
         <Box
