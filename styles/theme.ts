@@ -12,6 +12,10 @@ export const theme = extendTheme({
     text: {
       fontSize: "16px",
     },
+    blockquote: {
+      fontSize: "20px",
+      fontStyle: "italic",
+    },
   },
   radii: {
     default: "5px",

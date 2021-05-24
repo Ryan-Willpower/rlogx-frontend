@@ -14,7 +14,7 @@ const Home: React.FC = () => {
           <Card
             key={item.Title ? item.Title : getLogTitle(item.id)}
             id={item.id}
-            title={item.Title ? item.Title : getLogTitle(item.id)}
+            title={`${getLogTitle(item.id)} ${item.Title ? item.Title : ""}`}
             content={item.Content}
             datetime={item.created_at}
           />
