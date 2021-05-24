@@ -11,7 +11,7 @@ export const Header: React.FC = () => {
       w="100%"
       background="white"
       textAlign="center"
-      py="3"
+      py="10"
     >
       <Link href="/">r log x</Link>
     </Box>

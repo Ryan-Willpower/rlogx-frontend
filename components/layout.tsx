@@ -7,7 +7,7 @@ export const Layout: React.FC = ({ children }) => {
     <Flex justifyContent="center" my="30">
       <Header />
 
-      <Flex w={[300, 400, 600]} flexFlow="column" alignItems="center" mt="10">
+      <Flex w={[300, 400, 600]} flexFlow="column" alignItems="center" mt="90px">
         {children}
       </Flex>
     </Flex>
