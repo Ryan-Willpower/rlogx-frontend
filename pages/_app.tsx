@@ -30,7 +30,7 @@ MyApp.getInitialProps = async (_context: NextPageContext) => {
     const { data } = await apolloServer.query<AllLogsResponse>({
       query: gql`
         query getAllLogs {
-          logs {
+          logs(sort: "id:desc") {
             id
             created_at
             Title
